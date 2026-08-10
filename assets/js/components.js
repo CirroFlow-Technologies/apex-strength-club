@@ -107,7 +107,7 @@ const FOOTER = `
         <h4>Contact</h4>
         <address style="font-style:normal;">${APEX_ADDRESS_LINE1}<br>${APEX_ADDRESS_LINE2}</address>
         <a href="mailto:${APEX_EMAIL}">${APEX_EMAIL}</a>
-        <a href="contact.html">Join the email list</a>
+        <a href="contact.html">Contact &amp; FAQ</a>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -143,7 +143,7 @@ const FOOTER = `
 const MOBILE_STICKY_CTA = `
 <div class="mobile-sticky-cta">
   <a href="memberships.html" class="msc-claim">View Memberships</a>
-  <a href="contact.html" class="msc-secondary" aria-label="Contact and email signup">
+  <a href="contact.html" class="msc-secondary" aria-label="Contact Apex">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
   </a>
 </div>

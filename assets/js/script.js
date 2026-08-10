@@ -1,4 +1,4 @@
-/* Page interactivity: nav, hamburger, FAQ accordion, lightbox, video guard, mailto form. */
+/* Page interactivity: nav, hamburger, FAQ accordion, lightbox, video guard. */
 
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaq();
   initLightbox();
   initVideoGuard();
-  initMailtoForm();
   initScrollReveal();
 });
 
@@ -183,21 +182,5 @@ function initVideoGuard() {
     ["touchstart", "click", "scroll"].forEach((evt) =>
       document.addEventListener(evt, tryPlay, { once: true, passive: true })
     );
-  });
-}
-
-/* Email signup form -> mailto fallback (no backend wired yet, see build notes). */
-function initMailtoForm() {
-  const form = document.getElementById("email-signup-form");
-  if (!form) return;
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = form.querySelector('[name="name"]')?.value?.trim() || "";
-    const email = form.querySelector('[name="email"]')?.value?.trim() || "";
-    const subject = encodeURIComponent("Apex Strength Club — Email List Signup");
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nPlease add me to the Apex Strength Club updates list.`);
-    window.location.href = `mailto:${form.dataset.mailto}?subject=${subject}&body=${body}`;
-    const note = form.querySelector(".form-note-status");
-    if (note) note.textContent = "Opening your email app to send your signup — thanks for following the build!";
   });
 }
