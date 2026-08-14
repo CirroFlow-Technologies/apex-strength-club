@@ -120,7 +120,7 @@ const FOOTER = `
       <div class="footer-col">
         <h4>Hours &amp; Access</h4>
         <p>24/7 app-based member access</p>
-        <p>Opening late August&ndash;September</p>
+        <p>Under construction &mdash; opening date to be announced</p>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
