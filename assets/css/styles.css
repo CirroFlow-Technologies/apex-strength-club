@@ -634,6 +634,18 @@ button.gallery-item {
   font-size: 0.82rem; color: var(--text);
 }
 
+/* Facebook reel embed — vertical 9:16, capped so it doesn't dominate the section. */
+.reel-embed {
+  max-width: 320px;
+  margin: 0 auto 44px;
+  aspect-ratio: 267 / 476;
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  overflow: hidden;
+  background: var(--surface);
+}
+.reel-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
+
 .lightbox {
   position: fixed; inset: 0; z-index: 1000;
   background: rgba(5,5,5,0.94);
@@ -916,6 +928,8 @@ textarea.ff { resize: vertical; min-height: 110px; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
   .gallery-item, .gallery-item.wide { grid-column: span 1; }
+  /* Aerial build shots turn into a narrow vertical strip in a double-height phone tile. */
+  [data-page="updates"] .gallery-item.tall { grid-row: span 1; }
   .form-row { grid-template-columns: 1fr; }
   .mobile-sticky-cta { display: flex; }
   body { padding-bottom: 74px; } /* clear the sticky bar */
